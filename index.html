@@ -5,35 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>田中の部屋</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; color: #222; }
+        /* 全体：ユニバーサルデザインを意識した配色とゴシック体 */
+        body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; background: #fff; }
         
-        /* サイトタイトル：ポップで斬新なフォント指定 */
+        /* サイトタイトル：DFPOP1体風の太字＋黄色の縁取り */
         .site-title { 
-            text-align: center; font-size: 40px; margin-top: 50px;
+            text-align: center; font-size: 36px; margin-top: 40px;
             font-family: "Arial Black", "HGP創英角ﾎﾟｯﾌﾟ体", sans-serif; 
-            letter-spacing: 0.1em; color: #ff5500; /* 印象的なオレンジ */
+            color: #ffd700; /* 鮮やかな黄色 */
+            text-shadow: 2px 2px 0 #444, -1px -1px 0 #444, 1px -1px 0 #444, -1px 1px 0 #444, 1px 1px 0 #444;
         }
         
-        /* 概要：真ん中に寄せる */
-        .intro { text-align: center; margin: 40px 0; padding: 20px; font-size: 16px; }
+        /* 概要：スマホでも文の区切りで改行される設定 */
+        .intro { text-align: center; margin: 30px 0; font-size: 16px; }
+        .intro span { display: inline-block; } /* 文の塊を維持する魔法 */
 
-        /* はっきりとした境界線 */
-        hr { border: 0; border-top: 3px solid #333; margin: 40px 0; }
+        /* イラスト配置スペース */
+        .toys-box { text-align: center; margin-bottom: -10px; }
+        .toys-box img { width: 120px; vertical-align: bottom; }
 
-        /* 作品スペース：左はじめ */
+        /* 概要ボーダー（太線） */
+        .border-main { border: 0; border-top: 4px solid #444; margin: 0 0 30px 0; }
+
+        /* 検索バー（簡易イメージ） */
+        .search-area { text-align: center; margin-bottom: 40px; color: #888; }
+        .search-bar { border: 1px solid #ccc; border-radius: 20px; padding: 5px 15px; width: 80%; max-width: 300px; display: inline-block; }
+        .search-options { font-size: 14px; margin-top: 10px; }
+
+        /* 中ゾーン：作品リスト */
         .category { text-align: left; margin-bottom: 40px; }
-        .category h2 { border-left: 10px solid #ff5500; padding-left: 15px; font-size: 22px; }
+        .category h2 { background: #ffd700; border-left: 8px solid #444; padding: 5px 15px; font-size: 20px; }
         .category ul { list-style: none; padding: 0; }
-        .category li { margin: 10px 0; font-size: 18px; }
-        .category a { text-decoration: none; color: #0066cc; font-weight: bold; }
-    </style>
-</head>
-<body>
+        .category li { margin: 12px 0; border-bottom: 1px dashed #ccc; }
+        .category a { text-decoration: none; color: #0055aa; font-weight: bold; }
 
-    <h1 class="site-title">田中の部屋</h1>
-
-    <div class="intro">
-        <p>このサイトは、田中の小説や詩を置くところです。<br>
+        /* 下ゾーン：初心の記録 */
+        .archive-zone { background: #fefefe; border: 1px solid #eee; padding: 20px; margin-top: 60px; font-size: 15px; color: #666; }
+        .archive-title { font-weight: bold; margin-bottom: 10px; color: #999; }
         よくない表現が、ほんのちょっと入ってるかもしれません。<br>
         部屋を明るくして、画面からはなれてみてください。<br>
         わからなかったら、信頼できる大人にきいてください。</p>
