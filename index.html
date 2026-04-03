@@ -5,59 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>田中の部屋</title>
     <style>
-        /* 全体：読みやすいゴシック体 */
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; background: #fff; }
+        /* 基本：目に優しいゴシック体 */
+        body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; background: #fff; }
         
-        /* サイト名（画像）を中央に配置 */
-        .site-logo { text-align: center; margin-top: 50px; }
-        .site-logo img { max-width: 90%; height: auto; }
+        /* 1. サイトタイトル：あの頃の赤文字 */
+        .site-title { 
+            text-align: center; font-size: 32px; margin-top: 50px;
+            color: #ff0000; /* 純粋な赤 */
+            font-weight: bold;
+        }
         
-        /* 概要：スマホ改行対応 */
-        .intro { text-align: center; margin: 40px 0; font-size: 16px; }
+        .intro { text-align: center; margin: 30px 0; font-size: 16px; }
         .intro span { display: inline-block; }
 
-        /* ボーダー上の動物行進：DESERTS（左寄せ） */
+        /* 2. 動物の行進（DESERTS）：ボーダーの左端 */
         .animal-line { text-align: left; margin-bottom: -10px; padding-left: 5px; }
         .animal-line img { width: 40px; height: auto; margin-right: 2px; vertical-align: bottom; }
 
-        /* 黒い太線のボーダー */
-        .border-main { border: 0; border-top: 6px solid #000; margin: 0 0 40px 0; }
+        /* 3. ボーダー：黒い太線 */
+        .border-main { border: 0; border-top: 6px solid #000; margin: 0 0 30px 0; }
 
-        /* 中ゾーン：太短い山吹色の棒 */
-        .category { text-align: left; margin-bottom: 45px; }
-        .category h2 { font-size: 22px; padding-left: 15px; border-left: 14px solid #f8b500; line-height: 1.2; margin-bottom: 20px; color: #333; }
+        /* 4. 中ゾーン：山吹色の太短い棒 */
+        .category { text-align: left; margin-bottom: 40px; }
+        .category h2 { font-size: 20px; padding-left: 12px; border-left: 12px solid #f8b500; line-height: 1.2; margin-bottom: 15px; }
         .category ul { list-style: none; padding: 0; }
-        .category li { margin: 15px 0; font-size: 19px; }
+        .category li { margin: 10px 0; font-size: 18px; }
         .category a { text-decoration: none; color: #0055aa; font-weight: bold; }
 
-        /* 下ゾーン：昨日の文章全文（復元） */
-        .archive-zone { border-top: 1px solid #eee; padding-top: 40px; margin-top: 80px; font-size: 15px; color: #666; }
-        .archive-title { font-weight: bold; margin-bottom: 15px; color: #999; }
+        /* 5. 下ゾーン：駄文コーナー */
+        .archive-zone { border-top: 1px solid #eee; padding-top: 30px; margin-top: 60px; font-size: 15px; color: #666; }
 
-        /* 最下部のキツネ（右寄せ） */
-        .fox-link { text-align: right; margin-top: 50px; }
-        .fox-link img { width: 50px; height: auto; cursor: pointer; }
+        /* 6. 最下部：右端のキツネ（AI絵コーナー） */
+        .fox-exit { text-align: right; margin-top: 40px; }
+        .fox-exit img { width: 45px; height: auto; cursor: pointer; }
 
-        /* 作成日時（真ん中寄せ・薄い色） */
+        /* 7. 作成日時：真ん中寄せ・薄い色 */
         .footer-date { text-align: center; margin-top: 10px; font-size: 14px; color: #bbb; }
     </style>
 </head>
 <body>
 
-    <div class="site-logo">
-        <img src="サイト名の画像URL" alt="田中の部屋">
-    </div>
+    <h1 class="site-title">田中の部屋</h1>
 
     <div class="intro">
         <span>このサイトは、田中の小説や詩を置くところです。</span><br>
         <span>よくない表現が、ほんのちょっと入ってるかもしれません。</span><br>
         <span>部屋を明るくして、画面からはなれてみてください。</span><br>
-        <span>わからなかったら、信頼できる大人にきいてください。</span>
+        <span>わからなくなったら、信頼できる大人にきいてください。</span>
     </div>
 
     <div class="animal-line">
         <img src="いぬのURL" alt="D"><img src="ぞうのURL" alt="E"><img src="ひつじのURL" alt="S"><img src="わしのURL" alt="E"><img src="うさぎのURL" alt="R"><img src="とらのURL" alt="T"><img src="りすのURL" alt="S">
     </div>
+
     <hr class="border-main">
 
     <div class="category">
@@ -82,15 +82,14 @@
     </div>
 
     <div class="archive-zone">
-        <div class="archive-title">↓以下、駄文</div>
         <p>ここに、私の「、」を刻みます。</p>
         <p>2026年4月2日、私の城が完成しました。</p>
         <p>私は今、ここにいます。</p>
     </div>
 
-    <div class="fox-link">
+    <div class="fox-exit">
         <a href="ai-gallery.html">
-            <img src="キツネの画像URL" alt="AI絵コーナーへ">
+            <img src="きつねのURL" alt="AI絵">
         </a>
     </div>
 
