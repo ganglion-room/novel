@@ -4,42 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>田中の部屋</title>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* 基本：目に優しいゴシック体 */
-        body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; background: #fff; }
-        
-        /* 1. サイトタイトル：あの頃の赤文字 */
-        .site-title { 
-            text-align: center; font-size: 32px; margin-top: 50px;
-            color: #ff0000; /* 純粋な赤 */
-            font-weight: bold;
+        /* 全体：標準のゴシック体 */
+        body { 
+            font-family: sans-serif; 
+            line-height: 1.8; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            color: #333; 
+            background: #fff; 
         }
         
+        /* 1. サイトタイトル：山吹色の二重縁取りポップ体 */
+        .site-title { 
+            font-family: "Zen Maru Gothic", sans-serif;
+            text-align: center; 
+            font-size: 38px; 
+            margin-top: 50px;
+            color: #f8b500; /* 山吹色 */
+            /* 二重縁取りの魔法（白縁のあとに山吹色の影） */
+            text-shadow: 
+                -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff,
+                -4px -4px 0 #f8b500, 4px -4px 0 #f8b500, -4px 4px 0 #f8b500, 4px 4px 0 #f8b500;
+        }
+        
+        /* 2. 概要文 */
         .intro { text-align: center; margin: 30px 0; font-size: 16px; }
         .intro span { display: inline-block; }
 
-        /* 2. 動物の行進（DESERTS）：ボーダーの左端 */
-        .animal-line { text-align: left; margin-bottom: -10px; padding-left: 5px; }
+        /* 3. 動物の行進 (DESERTS) */
+        .animal-line { text-align: left; margin-bottom: -12px; padding-left: 5px; }
         .animal-line img { width: 40px; height: auto; margin-right: 2px; vertical-align: bottom; }
 
-        /* 3. ボーダー：黒い太線 */
+        /* 4. 黒い太線のボーダー */
         .border-main { border: 0; border-top: 6px solid #000; margin: 0 0 30px 0; }
 
-        /* 4. 中ゾーン：山吹色の太短い棒 */
+        /* 5. 作品リスト：山吹色の太短い棒 */
         .category { text-align: left; margin-bottom: 40px; }
         .category h2 { font-size: 20px; padding-left: 12px; border-left: 12px solid #f8b500; line-height: 1.2; margin-bottom: 15px; }
         .category ul { list-style: none; padding: 0; }
         .category li { margin: 10px 0; font-size: 18px; }
         .category a { text-decoration: none; color: #0055aa; font-weight: bold; }
 
-        /* 5. 下ゾーン：駄文コーナー */
+        /* 6. 下ゾーン：昨日の文章全文 */
         .archive-zone { border-top: 1px solid #eee; padding-top: 30px; margin-top: 60px; font-size: 15px; color: #666; }
 
-        /* 6. 最下部：右端のキツネ（AI絵コーナー） */
+        /* 7. 最下部：右端のキツネ */
         .fox-exit { text-align: right; margin-top: 40px; }
         .fox-exit img { width: 45px; height: auto; cursor: pointer; }
 
-        /* 7. 作成日時：真ん中寄せ・薄い色 */
+        /* 8. 作成日時 */
         .footer-date { text-align: center; margin-top: 10px; font-size: 14px; color: #bbb; }
     </style>
 </head>
@@ -63,7 +79,7 @@
     <div class="category">
         <h2>小説</h2>
         <ul>
-            <li><a href="page2.html">小説のタイトル</a></li>
+            <li><a href="page2.html">作品のタイトル</a></li>
         </ul>
     </div>
 
@@ -82,14 +98,30 @@
     </div>
 
     <div class="archive-zone">
-        <p>ここに、私の「、」を刻みます。</p>
-        <p>2026年4月2日、私の城が完成しました。</p>
-        <p>私は今、ここにいます。</p>
+         <p>ここに、私の「、」を刻みます。</p>
+        <p>広告も、ノイズもない。ここが私の、そしてあなたの「1号室」です。</p>
+        <p>&nbsp;</p>
+        <p>↑これが私が最初に作った文です。</p>
+        <p>私というか、AIがですが……。</p>
+<p>はじめてhtmlというのを作ってます。わざわざｐでくくるのが面倒ですね。<br>
+<br>
+AIくんがbrと二回打ったら一行空けられるよ！　と仰ってます。できてますか？</p>
+<p>このｐをいくつも打ってくといっぱい文が書けるらしいです。私はさっきからAIくんに質問攻めしてます。さすがのAIくんもイラッときたようで、同じことを繰り返してますね。</p>
+<p>「鉛筆マークをだしてください」<br>「どこですか」<br>「右上です」<br>「ないです」<br>「今なにが見えますか」<br>「英語がみえます」<br>（#＾ω＾）</p>
+<p>こんな感じです。</p>
+<p>AIも大変ですね。←</p>
+<p>とりあえずこんな感じでhtml作り、頑張ってみたいと思います。今日が初めの一歩です。この文を書けるまでに4時間かかりました。</p>
+<p>作業を全部スマホでやってるせいか、動きがカクカクしてます。</p>
+<p>上記のノイズだの１号室だの言ってるのは、AIに「，」がイヤだから「、」にしてとお願いして作らせた文です。作らせたというか、勝手にAIが作りました。</p>
+<p>デジタルって難しいですね。</p>
+<p>もし私がこの文字だけになったら、挫折したと思ってください。なんかほかの文とか増えてたら、頑張ってる最中なんだって思ってください。</p>
+<p>私はいま、ここにいます。</p>
+
     </div>
 
     <div class="fox-exit">
         <a href="ai-gallery.html">
-            <img src="きつねのURL" alt="AI絵">
+            <img src="きつねのURL" alt="AI絵コーナーへ">
         </a>
     </div>
 
