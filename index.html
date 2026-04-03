@@ -16,10 +16,11 @@
             background: #fff; 
         }
         
+        /* 1. 看板：サイズを少し上げ(36px)、存在感を強化 */
         .site-title { 
             font-family: "Zen Maru Gothic", sans-serif;
             text-align: center; 
-            font-size: 32px; 
+            font-size: 36px; 
             margin-top: 50px;
             color: #f8b500;
             text-shadow: 
@@ -27,7 +28,8 @@
                 -4px -4px 0 #f8b500, 4px -4px 0 #f8b500, -4px 4px 0 #f8b500, 4px 4px 0 #f8b500;
         }
         
-        .intro { text-align: center; margin: 30px 0; font-size: 16px; font-weight: bold; }
+        /* 2. 概要：前の読みやすかった太さに戻す */
+        .intro { text-align: center; margin: 30px 0; font-size: 16px; }
         .intro span { display: inline-block; }
 
         .animal-line { 
@@ -39,7 +41,6 @@
             white-space: nowrap;
         }
 
-        /* 概要バー：3px、グレー(#666)、角丸2px */
         .border-main { 
             border: 0; 
             border-top: 3px solid #666; 
@@ -47,94 +48,19 @@
             margin: 0 0 30px 0; 
         }
 
+        /* 3. 中ゾーン：概要と同じ16pxで箇条書き */
         .category { text-align: left; margin-bottom: 40px; }
         .category h2 { font-size: 20px; padding-left: 12px; border-left: 12px solid #f8b500; line-height: 1.2; margin-bottom: 15px; }
-        .category ul { list-style: none; padding: 0; }
-        .category li { margin: 10px 0; font-size: 18px; }
+        .category ul { list-style: disc; padding-left: 40px; } /* 箇条書きスタイル */
+        .category li { margin: 10px 0; font-size: 16px; } /* 概要と同じサイズ */
         .category a { text-decoration: none; color: #0055aa; font-weight: bold; }
 
-        /* 下ゾーン：アーカイブとしての色合い */
-        .archive-zone { border-top: 1px solid #eee; padding-top: 30px; margin-top: 60px; color: #777; }
+        /* 4. 下ゾーン：色の濃淡を再定義 */
+        .archive-zone { border-top: 1px solid #eee; padding-top: 30px; margin-top: 60px; }
         
-        .dabun-label { font-size: 16px; margin-bottom: 48px; }
+        .dabun-label { font-size: 16px; color: #777; margin-bottom: 48px; }
 
-        /* 城の完成：色を少し落とし、行頭を1マス空ける */
+        /* 城の完成：ここを基準に少し薄く */
         .archive-heading { font-size: 20px; font-weight: bold; color: #555; margin-bottom: 28px; padding-left: 1em; } 
-        .archive-content { font-size: 16px; }
 
-        .fox-exit { text-align: right; margin-top: 40px; }
-        .fox-exit a { 
-            text-decoration: none; 
-            font-size: 18px; 
-            opacity: 0.7;
-        }
-
-        .footer-date { text-align: center; margin-top: 15px; font-size: 14px; color: #999; }
-    </style>
-</head>
-<body>
-
-    <h1 class="site-title">田中の部屋</h1>
-
-    <div class="intro">
-        <span>このサイトは、田中の小説や詩を置くところです。</span><br>
-        <span>よくない表現が、ほんのちょっと入ってるかもしれません。</span><br>
-        <span>部屋を明るくして、画面からはなれてみてください。</span><br>
-        <span>わからなくなったら、信頼できる大人にきいてください。</span>
-    </div>
-
-    <div class="animal-line">
-        🐕 🐘 🐑 🦅 🐇 🐯 🐿️
-    </div>
-
-    <hr class="border-main">
-
-    <div class="category">
-        <h2>小説</h2>
-        <ul><li><a href="page2.html">作品のタイトル</a></li></ul>
-    </div>
-
-    <div class="category">
-        <h2>詩</h2>
-        <ul><li><a href="poem1.html">詩のタイトル</a></li></ul>
-    </div>
-
-    <div class="category">
-        <h2>その他</h2>
-        <ul><li><a href="misc1.html">日記・記録</a></li></ul>
-    </div>
-
-    <div class="archive-zone">
-        <div class="dabun-label">↓以下、駄文</div>
-        <div class="archive-heading">　城の完成</div>
-        <div class="archive-content">
-            <p>ここに、私の「、」を刻みます。</p>
-            
-            <p>広告も、ノイズもない。ここが私の、そしてあなたの「1号室」です。</p>
-
-            <p>↑これが私が最初に作った文です。</p>
-            <p>私というか、AIがですが……。</p>
-            <p>はじめてhtmlというのを作ってます。わざわざｐでくくるのが面倒ですね。<br>
-            <br>
-            AIくんがbrと二回打ったら一行空けられるよ！　と仰ってます。できてますか？</p>
-            <p>このｐをいくつも打ってくといっぱい文が書けるらしいです。私はさっきからAIくんに質問攻めしてます。さすがのAIくんもイラッときたようで、同じことを繰り返してますね。</p>
-            <p>「鉛筆マークをだしてください」<br>「どこですか」<br>「右上です」<br>「ないです」<br>「今なにが見えますか」<br>「英語がみえます」<br>（#＾ω＾）</p>
-            <p>こんな感じです。</p>
-            <p>AIも大変ですね。←</p>
-            <p>とりあえずこんな感じでhtml作り、頑張ってみたいと思います。今日が初めの一歩です。この文を書けるまでに4時間かかりました。</p>
-            <p>作業を全部スマホでやってるせいか、動きがカクカクしてます。</p>
-            <p>上記のノイズだの１号室だの言ってるのは、AIに「，」がイヤだから「、」にしてとお願いして作らせた文です。作らせたというか、勝手にAIが作りました。</p>
-            <p>デジタルって難しいですね。</p>
-            <p>もし私がこの文字だけになったら、挫折したと思ってください。なんかほかの文とか増えてたら、頑張ってる最中なんだって思ってください。</p>
-            <p>私はいま、ここにいます。</p>
-        </div>
-    </div>
-
-    <div class="fox-exit">
-        <a href="ai-gallery.html">🦊</a>
-    </div>
-
-    <div class="footer-date">作成日：2026/04/02</div>
-
-</body>
-</html>
+        /* 駄文本文：城の完成より「無意識レベル」で薄いが
