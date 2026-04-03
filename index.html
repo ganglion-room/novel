@@ -5,49 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>田中の部屋</title>
     <style>
-        /* 目に優しい基本設定 */
-        body { font-family: "Rounded Mplus 1c", "Kosugi Maru", sans-serif; line-height: 1.8; max-width: 700px; margin: 0 auto; padding: 20px; color: #333; background: #fff; }
+        /* 全体：読みやすいゴシック体 */
+        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; background: #fff; }
         
-        /* サイトタイトル：山吹色・丸い字・影なし */
-        .site-title { 
-            text-align: center; font-size: 32px; margin-top: 50px;
-            color: #f8b500; /* 山吹色 */
-            font-weight: bold;
-        }
+        /* サイト名（画像）を中央に配置 */
+        .site-logo { text-align: center; margin-top: 50px; }
+        .site-logo img { max-width: 90%; height: auto; }
         
-        /* 概要：キリの良いところで改行 */
-        .intro { text-align: center; margin: 30px 0; font-size: 15px; }
+        /* 概要：スマホ改行対応 */
+        .intro { text-align: center; margin: 40px 0; font-size: 16px; }
         .intro span { display: inline-block; }
 
-        /* 画像配置：概要ボーダーの上 */
-        .top-image { text-align: center; margin-bottom: 10px; }
-        .top-image img { max-width: 200px; height: auto; }
+        /* ボーダー上の動物行進：DESERTS（左寄せ） */
+        .animal-line { text-align: left; margin-bottom: -10px; padding-left: 5px; }
+        .animal-line img { width: 40px; height: auto; margin-right: 2px; vertical-align: bottom; }
 
-        /* 概要ボーダー（山吹色の太線） */
-        .border-main { border: 0; border-top: 5px solid #f8b500; margin: 0 0 30px 0; }
+        /* 黒い太線のボーダー */
+        .border-main { border: 0; border-top: 6px solid #000; margin: 0 0 40px 0; }
 
-        /* 検索バー：シンプルに */
-        .search-area { text-align: center; margin-bottom: 40px; color: #888; font-size: 14px; }
-        .search-bar { border: 1px solid #ddd; border-radius: 5px; padding: 8px; width: 80%; max-width: 300px; display: inline-block; margin-bottom: 5px; }
-
-        /* 中ゾーン：作品リスト（棒状の箇条書き） */
-        .category { text-align: left; margin-bottom: 35px; }
-        .category h2 { font-size: 19px; color: #f8b500; border-bottom: 2px solid #f8b500; padding-bottom: 5px; margin-bottom: 15px; }
+        /* 中ゾーン：太短い山吹色の棒 */
+        .category { text-align: left; margin-bottom: 45px; }
+        .category h2 { font-size: 22px; padding-left: 15px; border-left: 14px solid #f8b500; line-height: 1.2; margin-bottom: 20px; color: #333; }
         .category ul { list-style: none; padding: 0; }
-        .category li { margin: 10px 0; padding-left: 15px; border-left: 3px solid #f8b500; }
-        .category a { text-decoration: none; color: #444; font-weight: bold; }
+        .category li { margin: 15px 0; font-size: 19px; }
+        .category a { text-decoration: none; color: #0055aa; font-weight: bold; }
 
-        /* 下ゾーン：初心の記録 */
-        .archive-zone { border-top: 1px solid #eee; padding-top: 40px; margin-top: 60px; font-size: 14px; color: #777; }
-        .archive-title { font-weight: bold; margin-bottom: 10px; }
+        /* 下ゾーン：昨日の文章全文（復元） */
+        .archive-zone { border-top: 1px solid #eee; padding-top: 40px; margin-top: 80px; font-size: 15px; color: #666; }
+        .archive-title { font-weight: bold; margin-bottom: 15px; color: #999; }
 
-        /* 最下部の日付 */
-        .footer-date { text-align: center; margin-top: 50px; font-size: 14px; color: #bbb; }
+        /* 最下部のキツネ（右寄せ） */
+        .fox-link { text-align: right; margin-top: 50px; }
+        .fox-link img { width: 50px; height: auto; cursor: pointer; }
+
+        /* 作成日時（真ん中寄せ・薄い色） */
+        .footer-date { text-align: center; margin-top: 10px; font-size: 14px; color: #bbb; }
     </style>
 </head>
 <body>
 
-    <h1 class="site-title">田中の部屋</h1>
+    <div class="site-logo">
+        <img src="サイト名の画像URL" alt="田中の部屋">
+    </div>
 
     <div class="intro">
         <span>このサイトは、田中の小説や詩を置くところです。</span><br>
@@ -56,21 +55,15 @@
         <span>わからなかったら、信頼できる大人にきいてください。</span>
     </div>
 
-    <div class="top-image">
-        <img src="ここに画像URL" alt="">
+    <div class="animal-line">
+        <img src="いぬのURL" alt="D"><img src="ぞうのURL" alt="E"><img src="ひつじのURL" alt="S"><img src="わしのURL" alt="E"><img src="うさぎのURL" alt="R"><img src="とらのURL" alt="T"><img src="りすのURL" alt="S">
     </div>
-
     <hr class="border-main">
-
-    <div class="search-area">
-        <div class="search-bar">🔍 作品を検索</div><br>
-        あいうえお順 | 作成年日順
-    </div>
 
     <div class="category">
         <h2>小説</h2>
         <ul>
-            <li><a href="page2.html">小説のタイトル（第2話以降への入口）</a></li>
+            <li><a href="page2.html">小説のタイトル</a></li>
         </ul>
     </div>
 
@@ -90,75 +83,18 @@
 
     <div class="archive-zone">
         <div class="archive-title">↓以下、駄文</div>
-        <p>（ここに昨日の「1号室」のくだり等を復活させてください）</p>
         <p>ここに、私の「、」を刻みます。</p>
+        <p>2026年4月2日、私の城が完成しました。</p>
+        <p>私は今、ここにいます。</p>
+    </div>
+
+    <div class="fox-link">
+        <a href="ai-gallery.html">
+            <img src="キツネの画像URL" alt="AI絵コーナーへ">
+        </a>
     </div>
 
     <div class="footer-date">作成日時：2026/04/02</div>
-
-</body>
-</html>
-        .category h2 { background: #ffd700; border-left: 8px solid #444; padding: 5px 15px; font-size: 20px; }
-        .category ul { list-style: none; padding: 0; }
-        .category li { margin: 12px 0; border-bottom: 1px dashed #ccc; }
-        .category a { text-decoration: none; color: #0055aa; font-weight: bold; }
-
-        /* 下ゾーン：初心の記録 */
-        .archive-zone { background: #fefefe; border: 1px solid #eee; padding: 20px; margin-top: 60px; font-size: 15px; color: #666; }
-        .archive-title { font-weight: bold; margin-bottom: 10px; color: #999; }
-
-        /* 最下部の日付（Enterの代わり） */
-        .footer-date { text-align: center; margin-top: 50px; font-size: 18px; color: #888; }
-    </style>
-</head>
-<body>
-
-    <h1 class="site-title">田中の部屋</h1>
-
-    <div class="intro">
-        <span>このサイトは、田中の小説や詩を置くところです。</span><br>
-        <span>よくない表現が、ほんのちょっと入ってるかもしれません。</span><br>
-        <span>部屋を明るくして、画面からはなれてみてください。</span><br>
-        <span>わからなかったら、信頼できる大人にきいてください。</span>
-    </div>
-
-    <div class="toys-box">
-        <img src="" alt="玩具箱の飾り">
-    </div>
-
-    <hr class="border-main">
-
-    <div class="search-area">
-        <div class="search-bar">🔍 ここから作品を検索できます</div>
-        <div class="search-options">あいうえお順 | 作成年日順</div>
-    </div>
-
-    <div class="category">
-        <h2>小説</h2>
-        <ul>
-            <li><a href="page2.html">ここに小説のタイトル（第2話以降への入口）</a></li>
-        </ul>
-    </div>
-    <div class="category">
-        <h2>詩</h2>
-        <ul>
-            <li><a href="poem1.html">ここに詩のタイトル</a></li>
-        </ul>
-    </div>
-    <div class="category">
-        <h2>その他</h2>
-        <ul>
-            <li><a href="misc1.html">日記・記録</a></li>
-        </ul>
-    </div>
-
-    <div class="archive-zone">
-        <div class="archive-title">↓以下、駄文</div>
-        <p>（ここに昨日の「1号室」のくだりや、初めてHTMLを作った時の文言を復活させてください）</p>
-        <p>ここに、私の「、」を刻みます。</p>
-    </div>
-
-    <div class="footer-date">2026/04/02</div>
 
 </body>
 </html>
