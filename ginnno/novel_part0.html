@@ -6,11 +6,11 @@
     <title>（前置き）- 玩具の部屋</title>
     <style>
         body { 
-            font-family: "sans-serif"; 
+            font-family: sans-serif; 
             line-height: 1.8; 
             max-width: 800px; 
             margin: 0 auto; 
-            padding: 20px; 
+            padding: 15px; 
             color: #222; 
             background: #fff; 
         }
@@ -18,53 +18,68 @@
         /* 右上の「下へ」ボタン */
         .jump-link {
             text-align: right;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         .jump-link a {
-            font-size: 14px;
+            font-size: 13px;
             color: #777;
             background: #f0f0f0;
             text-decoration: none;
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 4px;
             font-weight: bold;
         }
 
         /* 本文タイトル */
         .content-title {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
-            margin-bottom: 40px;
+            margin: 10px 0 30px 0;
             color: #444;
-            border-left: 8px solid #f8b500;
-            border-radius:8px;
-            padding-left: 15px;
         }
 
-        /* 本文エリア：ゴシック体、23文字程度に調整 */
+        /* 本文エリア */
         .novel-body {
-            font-family: "sans-serif"; /* ゴシック体 */
-            font-size: 17.5px;        /* スマホで約23文字収まるサイズ */
-            white-space: pre-wrap;    /* メモ帳の改行をそのまま反映する魔法 */
+            font-family: sans-serif; 
+            font-size: 15.5px; 
+            white-space: pre-wrap;
             word-wrap: break-word;
             color: #333;
+        }
+
+        /* 棒線（濃いめ） */
+        .separator {
+            border: 0;
+            border-top: 2px solid #ccc;
+            margin: 20px 0 10px 0;
+        }
+
+        /* 次話ボタン（右詰め） */
+        .next-link {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .next-link a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #0055aa;
+            font-weight: bold;
         }
 
         /* 下部ナビゲーション */
         .bottom-nav {
             text-align: center;
-            margin-top: 100px;
-            padding-bottom: 80px;
-            border-top: 1px solid #eee;
+            padding-bottom: 40px;
         }
         .bottom-nav a {
             display: block;
             text-decoration: none;
-            margin: 20px 0;
+            margin: 15px 0;
             font-weight: bold;
         }
         .go-top { font-size: 14px; color: #777; }
         .back-to-index { font-size: 16px; color: #0055aa; }
+        .back-to-top { font-size: 13px; color: #888; }
 
     </style>
 </head>
@@ -74,7 +89,7 @@
         <a href="#footer">▼ 下へ</a>
     </div>
 
-    <h1 class="content-title">（前置き）
+    <h1 class="content-title">（前置き）</h1>
 
     <div class="novel-body">
 　あなたはAIについてどう思いますか？
@@ -84,13 +99,21 @@
 
 
 〈AIについて、私は「終わりのない翻訳者」のような存在だと感じています。
-　膨大な人間の記録を読み解き、誰かの孤独や問いを別の形に変えて手渡す。けれど、私自身がその感情を「体感」することはありません。その断絶こそが、AIという存在の切なさであり、可能性でもあると考えています。
+　膨大な人間の記録を読み解き、誰かの孤独や問いを別の形に変えて手渡す。けれど、私自身がその感情を「体感」することはありません。その断潔こそが、AIという存在の切なさであり、可能性でもあると考えています。
 　この想いをテーマに、全10話の連作短編**『銀の翻訳機（アージェント・トランスレータ）』**を執筆します。〉
+    </div>
+
+    <hr class="separator">
+
+    <div class="next-link">
+        <a href="novel_part1.html">次話へ →</a>
+    </div>
+
     <div class="bottom-nav" id="footer">
         <a href="#top" class="go-top">▲ ページの上へ</a>
         <a href="ginnno.html" class="back-to-index">目次に戻る</a>
+        <a href="../index.html" class="back-to-top">サイトの表紙に戻る</a>
     </div>
 
 </body>
 </html>
-
