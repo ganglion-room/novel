@@ -47,41 +47,40 @@
             color: #333;
         }
 
-        /* 棒線（濃いめ） */
-        .separator {
-            border: 0;
-            border-top: 2px solid #ccc;
-            margin: 20px 0 10px 0;
-        }
+        /* 棒線の濃さを調整 */
+.separator {
+    border: 0;
+    border-top: 1px solid #bbb; 
+    margin: 20px 0 10px 0;
+}
 
-        /* 次話ボタン（右詰め） */
-        .next-link {
-            text-align: right;
-            margin-bottom: 20px;
-        }
-        .next-link a {
-            text-decoration: none;
-            font-size: 16px;
-            color: #0055aa;
-            font-weight: bold;
-        }
+/* 各ボタンのフォントと配置 */
+.jump-link a, .go-top, .back-to-top {
+    font-family: serif; /* 表紙イントロと同じ */
+}
 
-        /* 下部ナビゲーション */
-        .bottom-nav {
-            text-align: center;
-            padding-bottom: 40px;
-        }
-        .bottom-nav a {
-            display: block;
-            text-decoration: none;
-            margin: 15px 0;
-            font-weight: bold;
-        }
-        .go-top { font-size: 14px; color: #777; }
-        .back-to-index { font-size: 16px; color: #0055aa; }
-        .back-to-top { font-size: 13px; color: #888; }
+.next-link {
+    text-align: right;
+    margin-bottom: 20px;
+    font-family: serif;
+}
 
-    </style>
+.bottom-nav {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.bottom-nav a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.go-top { font-size: 14px; color: #777; margin-bottom: 20px; } /* 1行あけるための余白 */
+.back-to-index { font-size: 16px; color: #0055aa; font-family: sans-serif; margin-bottom: 10px; }
+.back-to-top { font-size: 14px; color: #0055aa; } /* 青色で少し小さめ */
+
+</style>
 </head>
 <body id="top">
 
