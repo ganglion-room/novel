@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玩具の部屋</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            line-height: 1.8; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 15px; 
+            color: #222; 
+            background: #fff; 
+        }
+
+        /* 本文タイトル：text-indentで自動的に一マス空ける */
+        .content-title {
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0 30px 0;
+            color: #444;
+            text-indent: 1em; /* これでタイトルの1文字目が自動で空きます */
+        }
+
+        /* 本文エリア */
+        .novel-body {
+            font-family: sans-serif; 
+            font-size: 15px;
+            white-space: pre-wrap; /* 手動で入れた空白や改行をそのまま出す設定 */
+            word-wrap: break-word;
+            color: #333;
+        }
+
+        /* その他ナビゲーション設定（共通） */
+        .jump-link { text-align: right; margin-bottom: 5px; }
+        .jump-link a { font-family: sans-serif; font-size: 13px; color: #777; background: #f0f0f0; text-decoration: none; padding: 5px 12px; border-radius: 4px; }
+        .separator { border: 0; border-top: 1.5px solid #ddd; border-radius: 5px; margin: 20px 0 10px 0; }
+        .nav-links a { text-decoration: none; font-size: 16px; color: #0055aa; }
+        .bottom-nav { text-align: center; padding-bottom: 40px; }
+        .bottom-nav a { display: block; text-decoration: none; margin-bottom: 15px; }
+        .go-top { font-size: 14px; color: #777; }
+        .back-to-index { font-weight: bold; font-size: 16px; color: #0055aa; }
+        .back-to-top { font-size: 14px; color: #0055aa; }
+    </style>
+</head>
+<body id="top">
+
+    <div class="jump-link">
+        <a href="#footer">▼ 下へ</a>
+    </div>
+
+    <h1 class="content-title">題名</h1>
+
+    <div class="novel-body">
+本文
+    </div>
+
+    <hr class="separator">
+
+    <div class="nav-links">
+        <a href="novel_part○.html">← 前話へ</a>
+    </div>
+
+    <div class="bottom-nav" id="footer">
+        <a href="#top" class="go-top">▲ ページの上へ</a>
+        <a href="ginnno.html" class="back-to-index">目次に戻る</a>
+        <a href="../index.html" class="back-to-top">トップへ戻る</a>
+    </div>
+
+</body>
+</html>
