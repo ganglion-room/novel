@@ -39,7 +39,6 @@
             white-space: nowrap;
         }
 
-        /* 境界線：下の余白を広げました */
         .border-main { 
             border: 0; 
             border-top: 3px solid #666; 
@@ -56,6 +55,24 @@
         .category ul li::marker { font-size: 0.8em; color: #888; }
         .category li { margin: 8px 0; font-size: 16px; }
         .category a { text-decoration: none; color: #0055aa; font-weight: bold; }
+
+        /* 注釈ボックス：あらすじと同じデザイン */
+        .note-box {
+            background-color: #fcfcfc;
+            border: 1px solid #eee;
+            padding: 15px 20px;
+            margin: 40px 10px;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+        }
+        .note-box div { margin-bottom: 10px; }
+        .note-box .disclaimer { 
+            font-size: 12px; 
+            border-top: 1px dashed #ddd; 
+            padding-top: 10px; 
+            margin-top: 15px; 
+        }
 
         .archive-zone { border-top: 1px solid #eee; padding-top: 30px; margin-top: 60px; }
         .dabun-label { font-size: 16px; color: #777; margin-bottom: 48px; }
@@ -108,6 +125,14 @@
         <ul>
             <li><a href="misc1.html">日記・記録</a></li>
         </ul>
+    </div>
+
+    <div class="note-box">
+        <div><strong>「*」について</strong></div>
+        <div>無印……完全に人間作。または、作品の着想や設定の考証においてAIを補助的に使用したが、本文はすべて人間作。</div>
+        <div>＊……AIと人間作。部分的にAI生成文をそのまま、あるいは微修正して使用。</div>
+        <div>＊＊……AI主体。執筆の大部分がAIで人間はディレクション。AIと人間との対話形式を含む。</div>
+        <div class="disclaimer">本コンテンツの一部はAI（Google Gemini）によって生成されており、情報の正確性について保証するものではありません。</div>
     </div>
 
     <div class="archive-zone">
