@@ -56,30 +56,43 @@
         }
 
         /* 目次エリア */
-        .index-container { margin-top: 40px; }
-        /* リスト全体：横いっぱいに反応させ、日付を右端へ */
+        /* リストを横いっぱいに広げ、日付を右端へ */
 .index-list li { 
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #f2f2f2; 
-    padding: 15px 5px; 
+    padding: 0; /* aタグを広げるため0に */
 }
 .index-list a { 
-    display: block;
-    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 5px;
     text-decoration: none; 
     color: #0055aa; 
     font-weight: bold; 
     font-size: 17px; 
+    /* フォント設定：タイトル等はゴシック、その他は標準 */
+    font-family: sans-serif; 
 }
 .index-list span { 
     font-size: 14px; 
     color: #999; 
-    margin-left: 15px; 
-    white-space: nowrap; 
+    font-weight: normal;
+    /* フォント設定：表紙イントロと同じ */
+    font-family: serif; 
 }
 
+/* あらすじ：改行や空白を反映 */
+.intro-text {
+    white-space: pre-wrap;
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
 
         /* 短編用ボタン */
         .read-button { 
