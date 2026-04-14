@@ -74,8 +74,8 @@
     font-size: 14px; 
     color: #666; 
     line-height: 1.6;
-    background: #f4f4f4;
-    padding: 15px;
-    border-radius: 10px;
+    background: none; /* 背景なし */
+    border: none;     /* 枠なし */
+    padding: 0;
     clear: both;
 }
