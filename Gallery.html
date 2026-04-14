@@ -28,7 +28,17 @@
       transform: translateX(-50%); /* 自分の幅の半分だけ左に戻す（これでぴったり真ん中にくる） */
       margin-bottom: 30px; /* 下のイントロとの間隔 */
       line-height: 0;     /* 画像の下にできる謎の隙間を消す */
+      /* --- ここを追加：上部の余白を完全に消す --- */
+      padding-top: 0;
+      margin-top: 0;
     }
+
+    /* 文字が重なるのを防ぐための設定 */
+    .intro {
+      margin-top: 20px; /* 画像のすぐ下に少しだけ隙間を作る */
+      position: relative; /* 重なりを解消する */
+      z-index: 10;
+      clear: both;
 
     /* headerの中にある画像（トップ絵）のスタイル */
     header img {
