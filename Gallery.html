@@ -18,6 +18,27 @@
     /* header全体を中央寄せにする */
     header { text-align: center; margin-bottom: 40px; }
 
+        /* --- ここから追加 --- */
+    
+    /* トップ絵を画面いっぱいに広げるための設定 */
+    header {
+      width: 100vw;       /* 画面の横幅いっぱい(100%)にする */
+      position: relative; /* 位置調整の基準にする */
+      left: 50%;          /* 一旦、画面中央に持っていく */
+      transform: translateX(-50%); /* 自分の幅の半分だけ左に戻す（これでぴったり真ん中にくる） */
+      margin-bottom: 30px; /* 下のイントロとの間隔 */
+      line-height: 0;     /* 画像の下にできる謎の隙間を消す */
+    }
+
+    /* headerの中にある画像（トップ絵）のスタイル */
+    header img {
+      width: 100%;        /* 親(header)の横幅いっぱいにする */
+      height: auto;       /* 縦横比を保つ */
+      border-radius: 0;   /* もし角を丸くしていたら、ここを0にして四角くする */
+    }
+    
+    /* --- ここまで追加 --- */
+
     .intro { margin: 30px 0; font-size: 16px; }
     .intro span { display: inline-block; }
 
@@ -60,7 +81,7 @@
 
 <body>
   <header>
-    <img src="image/saka-kemomimi.png" alt="坂道の女子たち" style="width: 100%; height: auto; border-radius: 8px;">
+    <img src="image/saka-kemomimi.png" alt="坂道の女子たち">
     <div class="intro">
       <span>よくここまでたどりつきましたね。</span><br>
       <span>ここはAIイラストをのせる場です。</span><br>
