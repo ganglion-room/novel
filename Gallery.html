@@ -128,5 +128,25 @@
       <a href="index.html" class="back-to-top">トップへ戻る</a>
     </div>
   </footer>
+
+  <script>
+    function switchChara(index) {
+      // 1. すべてのアイコン、画像、説明文から 'active' クラスを消す（非表示にする）
+      const icons = document.querySelectorAll('.chara-icon');
+      const imgs = document.querySelectorAll('.chara-display img');
+      const infos = document.querySelectorAll('.chara-info');
+      
+      icons.forEach(icon => icon.classList.remove('active'));
+      imgs.forEach(img => img.classList.remove('active'));
+      infos.forEach(info => info.classList.remove('active'));
+      
+      // 2. クリックされた番号（index）の要素にだけ 'active' クラスをつける（表示する）
+      icons[index].classList.add('active');
+      imgs[index].classList.add('active');
+      infos[index].classList.add('active');
+    }
+  </script>
+</body>
+
 </body>
 </html>
