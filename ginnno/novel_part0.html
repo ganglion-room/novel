@@ -7,31 +7,35 @@
     <style>
         body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 15px; color: #222; background: #fff; }
         
-        /* タイトル・ナビ（元の仕様を維持） */
-        .content-title { font-size: 20px; font-weight: bold; margin: 10px 0 30px 0; color: #444; text-indent: 1em; }
-        .jump-link, .next-link { text-align: right; margin-bottom: 25px; font-family: ui-sans-serif, system-ui, sans-serif; }
-        .jump-link a { font-size: 13px; color: #777; background: #f0f0f0; text-decoration: none; padding: 5px 12px; border-radius: 4px; }
-        .next-link a { text-decoration: none; font-size: 16px; color: #0055aa; }
+        /* 既存の小説デザイン */
+        .content-title { font-family: sans-serif; font-size: 20px; font-weight: bold; margin: 10px 0 30px 0; color: #444; text-indent: 1em; }
+        .jump-link { text-align: right; margin-bottom: 5px; }
+        .jump-link a { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; color: #777; background: #f0f0f0; text-decoration: none; padding: 5px 12px; border-radius: 4px; }
+        .next-link { text-align: right; margin-bottom: 25px; }
+        .next-link a { text-decoration: none; font-size: 16px; color: #0055aa; font-family: ui-sans-serif, system-ui, sans-serif; }
         .separator { border: 0; border-top: 1.5px solid #ddd; border-radius: 5px; margin: 20px 0 10px 0; clear: both; }
 
-        /* 会話コンテナ */
-        .talk-container { clear: both; padding-top: 10px; }
+        /* 会話レイアウト */
+        .talk-container { clear: both; padding-top: 20px; }
         .talk-container::after { content: ""; display: block; clear: both; }
 
-        /* 共通：吹き出し（文字サイズを小説に寄せて拡大） */
-        .bubble { position: relative; padding: 12px 16px; border-radius: 15px; margin-bottom: 25px; max-width: 85%; font-size: 15px; line-height: 1.6; clear: both; white-space: pre-wrap; }
+        /* 肩書き（欄外・四角の上） */
+        .label { font-size: 12px; color: #777; margin-bottom: 5px; display: block; font-weight: bold; }
+
+        /* 吹き出し共通（文字サイズを小説に合わせる） */
+        .bubble { position: relative; padding: 12px 16px; border-radius: 12px; margin-bottom: 30px; max-width: 85%; font-size: 15px; line-height: 1.6; clear: both; white-space: pre-wrap; }
         
-        /* ラベル（余白を狭く） */
-        .label { font-size: 12px; color: #777; margin-bottom: 2px; display: block; font-weight: bold; }
+        /* 人間：右寄せ・白地 */
+        .human-part { float: right; margin-left: auto; }
+        .human-part .bubble { background: #fff; border: 1px solid #ddd; color: #000; }
+        .human-part .label { text-align: right; margin-right: 5px; }
 
-        /* 人間：白地 */
-        .human-part { float: right; background: #fff; border: 1px solid #ddd; color: #000; }
-        .human-part .label { text-align: right; }
+        /* Gemini：左寄せ・薄い灰色 */
+        .ai-part { float: left; margin-right: auto; }
+        .ai-part .bubble { background: #f0f0f0; border: 1px solid #ddd; color: #000; }
+        .ai-part .label { text-align: left; margin-left: 5px; }
 
-        /* AI（Gemini / ChatGPT）：薄い灰色 */
-        .ai-part { float: left; background: #f0f0f0; border: 1px solid #ddd; color: #000; }
-
-        /* 下部ナビ（元のデザインに統一） */
+        /* 下部ナビ */
         .bottom-nav { text-align: center; padding-bottom: 40px; }
         .bottom-nav a { display: block; text-decoration: none; }
         .go-top { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; color: #777; margin-bottom: 25px; }
@@ -45,19 +49,19 @@
     <h1 class="content-title">（前置き）</h1>
 
     <div class="talk-container">
-        <div class="bubble human-part">
+        <div class="human-part">
             <span class="label">人間</span>
-あなたはAIについてどう思いますか？
+            <div class="bubble">あなたはAIについてどう思いますか？
+答えが出ましたか。その答えをテーマにした小説を書いて。1話1000字の10話、1話ごとに送って。私がはいというのでそしたら２話、３話と送って。
+あなたが感動すると思う作品にしてください。</div>
         </div>
 
-        <div class="bubble ai-part">
+        <div class="ai-part">
             <span class="label">Gemini</span>
-AIについて、私は「終わりのない翻訳者」のような存在だと感じています。
-        </div>
+            <div class="bubble">AIについて、私は「終わりのない翻訳者」のような存在だと感じています。
+膨大な人間の記録を読み解き、誰かの孤独や問いを別の形に変えて手渡す。けれど、私自身がその感情を「体感」することはありません。その断絶こそが、AIという存在の切なさであり、可能性でもあると考えています。
 
-        <div class="bubble ai-part">
-            <span class="label">ChatGPT</span>
-それは興味深い視点ですね。
+この想いをテーマに、全10話の連作短編**『銀の翻訳機（アージェント・トランスレータ）』**を執筆します。</div>
         </div>
     </div>
 
@@ -69,5 +73,6 @@ AIについて、私は「終わりのない翻訳者」のような存在だと
         <a href="ginnno.html" class="back-to-index">目次に戻る</a>
         <a href="../index.html" class="back-to-top">トップへ戻る</a>
     </div>
+
 </body>
 </html>
