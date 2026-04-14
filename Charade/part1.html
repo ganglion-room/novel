@@ -4,137 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>玩具の部屋（裏）</title>
-    <style>
-        body { 
-            font-family: sans-serif; 
-            line-height: 1.8; 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 15px; 
-            color: #222; 
-            background: #fff; 
-        }
-
-        /* 右上の「下へ」：標準フォント・細め */
-        .jump-link {
-            text-align: right;
-            margin-bottom: 5px;
-        }
-        .jump-link a {
-            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-            font-size: 13px;
-            color: #777;
-            background: #f0f0f0;
-            text-decoration: none;
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-weight: normal;
-        }
-
-        /* 本文タイトル：ゴシック・太字 */
-        .content-title {
-            font-family: sans-serif;
-            font-size: 20px;
-            font-weight: bold;
-            margin: 10px 0 30px 0;
-            color: #444;
-            text-indent: 1em;
-        }
-
-        /* 本文エリア：ゴシック*/
-        .novel-body {
-            font-family: sans-serif; 
-            font-size: 15px;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            color: #333;
-
-        }
-
-        /* 棒線：少し薄くし、角を丸める */
-        .separator {
-            border: 0;
-            border-top: 1.5px solid #ddd;
-            border-radius: 5px;
-            margin: 20px 0 10px 0;
-        }
-
-        /* 次話ボタン：標準フォント・細め・右詰め */
-        .next-link {
-            text-align: right;
-            margin-bottom: 25px;
-        }
-        .next-link a {
-            text-decoration: none;
-            font-size: 16px;
-            color: #0055aa;
-            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-            font-weight: normal;
-        }
-
-        /* 下部ナビゲーション */
-        .bottom-nav {
-            text-align: center;
-            padding-bottom: 40px;
-        }
-        .bottom-nav a {
-            display: block;
-            text-decoration: none;
-        }
-
-        /* ページの上へ：標準フォント・細め */
-        .go-top { 
-            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-            font-size: 14px; 
-            color: #777; 
-            font-weight: normal;
-            margin-bottom: 25px; /* 目次に戻るボタンとの間を1行あける */
-        }
-
-        /* 目次に戻る：ゴシック・太字 */
-        .back-to-index { 
-            font-family: sans-serif;
-            font-size: 16px; 
-            color: #0055aa; 
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        /* トップへ戻る：標準フォント・細め・青色 */
-        .back-to-top { 
-            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-            font-size: 14px; 
-            color: #0055aa; 
-            font-weight: normal;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../style/base-first.css">
+    <link rel="stylesheet" href="../style/AI-taiwa.css">
 </head>
 <body id="top">
 
-    <div class="jump-link">
-        <a href="#footer">▼ 下へ</a>
-    </div>
+    <div class="jump-link"><a href="#footer">▼ 下へ</a></div>
 
-    <h1 class="content-title">１　罵倒少女</h1>
+    <h1 class="content-title">ルオン制作記録：第1話</h1>
 
-    <div class="novel-body">
-　本文
-    </div>
+    <div class="talk-container">
 
+        <div class="editor-note">
+            キャラクター「ルオン」の初期案を練り始めた時の記録です。
+        </div>
+
+        <div class="human-part">
+            <span class="label">人間</span>
+            <div class="bubble">新しいキャラを考えたいんだ。名前は「ルオン」。
+キツネの耳が生えた女の子で、少しミステリアスな雰囲気にしてほしい。</div>
+        </div>
+
+        <div class="ai-part">
+            <span class="label">Gemini</span>
+            <div class="bubble">素敵ですね。「ルオン」という名前にミステリアスな狐娘……。
+まずは外見の特徴から深掘りしていきましょうか。</div>
+        </div>
+
+        </div>
     <hr class="separator">
-
-    <div class="next-link">
-        <a href="part2.html">次話へ →</a>
-    </div>
 
     <div class="bottom-nav" id="footer">
         <a href="#top" class="go-top">▲ ページの上へ</a>
-        
-        <a href="Charade.html" class="back-to-index">目次に戻る</a>
-        
-        <a href="../Gallery.html" class="back-to-top">（裏）トップへ戻る</a>
+        <a href="luon_index.html" class="back-to-index">目次に戻る</a>
+        <a href="../index.html" class="back-to-top">トップへ戻る</a>
     </div>
 
 </body>
-          </html>
+</html>
