@@ -34,7 +34,7 @@
         .nav-links { display: flex; justify-content: space-between; margin-bottom: 25px; }
         .nav-links a { text-decoration: none; font-size: 16px; color: #0055aa; }
         .bottom-nav { text-align: center; padding-bottom: 40px; }
-        .bottom-nav a { display: block; text-decoration: none; margin-bottom: 15px; }
-        .go-top { font-size: 14px; color: #777; }
-        .back-to-index { font-weight: bold; font-size: 16px; color: #0055aa; }
+        .bottom-nav a { display: block; text-decoration: none; }
+        .go-top { font-size: 14px; color: #777; margin-bottom: 25px; }
+        .back-to-index { font-weight: bold; font-size: 16px; color: #0055aa; margin-bottom: 15px; }
         .back-to-top { font-size: 14px; color: #0055aa; }
