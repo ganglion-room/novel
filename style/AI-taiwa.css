@@ -1,21 +1,20 @@
-/* 1. 編集者の言葉（真ん中、濃く、大きく） */
+/* 1. 編集者：真ん中寄せ、文字を大きく濃く */
 .editor {
     text-align: center;
     font-size: 1.25em;
     color: #000;
     font-weight: bold;
     margin: 40px 0;
-    line-height: 1.6;
 }
 
-/* 2. 人間の言葉（枠とラベル） */
+/* 2. 人間：白い枠、右上に「人間」ラベル */
 .human {
     position: relative;
     margin: 40px 0 20px;
     padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 15px;
-    background-color: #fff;
+    border: 1px solid #e0e0e0; /* 枠線 */
+    border-radius: 15px;      /* 角を丸く */
+    background-color: #fff;   /* 背景を白に */
 }
 .human::before {
     content: "人間";
@@ -26,14 +25,14 @@
     color: #888;
 }
 
-/* 3. AIの言葉（グレーの枠とラベル） */
+/* 3. AI：グレーの枠、左上に「Gemini」ラベル */
 .gemini {
     position: relative;
     margin: 40px 0 20px;
     padding: 20px;
-    border: 1px solid #d1d9e0;
-    border-radius: 15px;
-    background-color: #f6f8fa;
+    border: 1px solid #d1d9e0; /* 枠線 */
+    border-radius: 15px;      /* 角を丸く */
+    background-color: #f6f8fa; /* 背景をグレーに */
 }
 .gemini::before {
     content: "Gemini";
