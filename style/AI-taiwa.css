@@ -1,81 +1,45 @@
-/* --- AI対話専用シール --- */
-
-/* 会話全体のコンテナ */
-.talk-container { 
-    clear: both; 
-    padding-top: 20px; 
-    width: 100%;
-}
-.talk-container::after { 
-    content: ""; 
-    display: block; 
-    clear: both; 
-}
-
-/* 肩書き（共通） */
-.label { 
-    font-size: 12px; 
-    color: #777; 
-    margin-bottom: 5px; 
-    display: block; 
-    font-weight: bold; 
-}
-
-/* 吹き出し共通 */
-.bubble { 
-    position: relative; 
-    padding: 12px 16px; 
-    border-radius: 12px; 
-    margin-bottom: 30px; 
-    max-width: 85%; 
-    font-size: 15px; 
-    line-height: 1.6; 
-    clear: both; 
-    white-space: pre-wrap; 
-    text-align: left; 
-}
-
-/* 【人間パート】 */
-.human-part { 
-    float: right; 
-    width: 100%; 
-}
-.human-part .bubble { 
-    background: #fff; 
-    border: 1px solid #ddd; 
-    color: #000; 
-    margin-left: auto; /* 右に寄せる */
-}
-.human-part .label { 
-    text-align: right; 
-    margin-right: 5px; 
-}
-
-/* 【Geminiパート】 */
-.ai-part { 
-    float: left; 
-    width: 100%; 
-}
-.ai-part .bubble { 
-    background: #f9f9f9; /* 薄い灰色 */
-    border: 1px solid #ddd; 
-    color: #000; 
-    margin-right: auto; /* 左に寄せる */
-}
-.ai-part .label { 
-    text-align: left; 
-    margin-left: 5px; 
-}
-
-/* ③ 編集視点パート（追加しました） */
-.editor-note { 
-    text-align: center; 
-    margin: 40px 0; 
-    font-size: 14px; 
-    color: #666; 
+/* 1. 編集者の言葉（真ん中、濃く、大きく） */
+.editor {
+    text-align: center;
+    font-size: 1.25em;
+    color: #000;
+    font-weight: bold;
+    margin: 40px 0;
     line-height: 1.6;
-    background: none; /* 背景なし */
-    border: none;     /* 枠なし */
-    padding: 0;
-    clear: both;
+}
+
+/* 2. 人間の言葉（枠とラベル） */
+.human {
+    position: relative;
+    margin: 40px 0 20px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.human::before {
+    content: "人間";
+    position: absolute;
+    top: -25px;
+    right: 10px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* 3. AIの言葉（グレーの枠とラベル） */
+.gemini {
+    position: relative;
+    margin: 40px 0 20px;
+    padding: 20px;
+    border: 1px solid #d1d9e0;
+    border-radius: 15px;
+    background-color: #f6f8fa;
+}
+.gemini::before {
+    content: "Gemini";
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    font-size: 0.8em;
+    color: #888;
 }
