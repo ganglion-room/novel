@@ -20,7 +20,7 @@
 /* 2. 人間：左寄せ、白い枠 */
 .human {
     position: relative;
-    margin: 30px 0 10px 20%; /* 左側を空けて左に寄せる */
+    margin: 25px 0 15px 20%; /* 左側を空けて左に寄せる */
     padding: 15px;
     border: 1px solid #e0e0e0;
     border-radius: 12px;
@@ -39,7 +39,7 @@
 /* 3. AI共通設定（GeminiとGPT両方に効く） */
 .gemini, .ChatGPT {
     position: relative;
-    margin: 30px 20% 10px 0; /* 左側を空けて右に寄せる */
+    margin: 25px 20% 15px 0; /* 左側を空けて右に寄せる */
     padding: 15px;
     border-radius: 12px;
     white-space: pre-wrap; /* 枠内のみ改行を有効に */
