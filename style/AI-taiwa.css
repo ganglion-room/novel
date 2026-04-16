@@ -1,9 +1,17 @@
-img {
+AI img {
       width: 50%;
       height: auto;
       display: block;
     float: left;
-    margin:5px;
+    margin:35px 0 15px 20%;
+}
+
+human img {
+      width: 50%;
+      height: auto;
+      display: block;
+    float: left;
+    margin:35px 20% 15px 0;
 }
 
 /* 1. 編集者：文字サイズを落とし、太字を解除 */
