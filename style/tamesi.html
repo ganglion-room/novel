@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玩具の部屋（裏）</title>
+<style>
+          body { 
+            font-family: sans-serif; 
+            line-height: 1.8; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 15px; 
+            color: #222; 
+
+        }
+
+        /* 本文タイトル：text-indentで自動的に一マス空ける */
+        .content-title {
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0 30px 0;
+            color: #444;
+            text-indent: 1em; /* これでタイトルの1文字目が自動で空きます */
+        }
+
+        /* 本文エリア */
+        .novel-body {
+            font-family: sans-serif; 
+            font-size: 15px;
+            white-space: pre-wrap; /* 手動で入れた空白や改行をそのまま出す設定 */
+            word-wrap: break-word;
+            color: #333;
+        }
+
+        /* その他ナビゲーション設定（共通） */
+        .jump-link { text-align: right; margin-bottom: 5px; }
+        .jump-link a { font-family: sans-serif; font-size: 13px; color: #777; background: #f0f0f0; text-decoration: none; padding: 5px 12px; border-radius: 4px; }
+        .separator { border: 0; border-top: 1.5px solid #ddd; border-radius: 5px; margin: 20px 0 10px 0; }
+        /* 外枠：とにかく横いっぱいに広がる箱 */
+.nav-links { 
+    display: flex; 
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* 前話へ：常に左にいたい */
+.prev-button { 
+    text-decoration: none; 
+    margin-right: auto; /* 右側をガバーっと空けて、自分は左に残る */
+}
+
+/* 次話へ：常に右にいたい */
+.next-button { 
+    text-decoration: none; 
+    margin-left: auto; /* 左側をガバーっと空けて、自分を右に押し出す */
+}
+        .nav-links a { text-decoration: none; font-size: 16px; color: #0055aa; }
+        .bottom-nav { text-align: center; padding-bottom: 40px; }
+        .bottom-nav a { display: block; text-decoration: none; }
+        .go-top { font-size: 14px; color: #777; margin-bottom: 25px; }
+        .back-to-index { font-weight: bold; font-size: 16px; color: #0055aa; margin-bottom: 15px; }
+        .back-to-top { font-size: 14px; color: #0055aa; }
+
+
+
+.icon-img{
+    width: 20px; 
+    border-radius: 50%;
+}
+
+.name-area {
+    display: flex; /* 横並びにする */
+    align-items: center; /* 子要素の高さを揃える */
+}
+
+.name-area span {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.image-container {
+  display: flex; /* 横並びにする */
+  gap: 10px;    /* 画像間の隙間 */
+  justify-content: center; /* 中央寄せ */
+}
+.image-container img {
+  max-width: 30%; /* レスポンシブ対応 */
+  height: auto;
+}
+
+/* 1. 編集者：文字サイズを落とし、太字を解除 */
+.editor {
+    text-align: center;
+    font-size: 1.1em; /* 前より小さく */
+    color: #000;
+    margin: 30px 0;
+    white-space: pre-wrap; /* 枠内のみ改行を有効に */
+}
+
+/* 2. 人間：左寄せ、白い枠 */
+.human {
+    position: relative;
+    margin: 25px 0 15px 20%; /* 左側を空けて左に寄せる */
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fff;
+    white-space: pre-wrap; /* 枠内のみ改行を有効に */
+}
+
+/* 3. AI共通設定（GeminiとGPT両方に効く） */
+.gemini, .ChatGPT {
+    position: relative;
+    margin: 25px 20% 15px 0; /* 左側を空けて右に寄せる */
+    padding: 15px;
+    border-radius: 12px;
+    white-space: pre-wrap; /* 枠内のみ改行を有効に */
+}
+
+/* Gemini：薄いグレー */
+.gemini {
+    background-color: #f6f8fa;
+    border: 1px solid #d1d9e0;
+}
+
+/* GPT：薄い緑 */
+.ChatGPT {
+    background-color: #f0fdf4;
+    border: 1px solid #dcfce7;
+}
+
+</style>
+
+</head>
+<body id="top">
+
+    <div class="jump-link">
+        <a href="#footer">▼ 下へ</a>
+    </div>
+
+    <h1 class="content-title">２　キツネ迷走</h1>
+    <div class="novel-body">
+<div class="gemini">
+    <div class="name-area">
+        <img src="yuki.png" class="icon-img">
+        <span>Gemini</span>
+    </div>
+    <div class="message">こんにちは！</div>
+</div>
+
+
+<div class="talk-container">
+    ​<div class="editor">次の日。
+別チャットを新規作成。
+
+ヤツが一枚目に送ってきた画像が、なんとなく印象に残っていた</div>
+    <div class="human">この子をルオンという名とする。
+この子の別ショットをみせて</div>
+    ​<div class="gemini">申し訳ありませんが、ご依頼いただいた内容に沿った画像の生成はできません。現在、私は暴力的なコンテンツや物理的な危害を助長する画像の作成は行っておらず、そうしたコンテンツの生成や変更を求められた場合、拒否するようになっています。</div>
+    <div class="human">暴力的でなくていい、たとえば図書館にいるカットとか、放課後クレープを食べてるシーンとか。</div>
+<div class="image-container">
+    <img src="../image/tosho.png" alt="図書室">
+</div>
+    ​<div class="editor">おおッ！　かわゆい！</div>
+    <div class="human">そんな感じです。ルオンの目の色は#0055aaみたいな、鮮やかな青。この子のほかの日常写真もみたいです。スマホ画面ではなく、1個の風景にしてください。
+
+シーンは科学室で椅子に片足をのせて座りつつフラスコを揺すってるような感じ。今後もたびたびこのようなシーン別イラストの生成を指示しますが、主人公（モチーフ）はこの子にしてください</div>
+<div class="image-container">
+        <img src="../image/rika2.png" alt="理科">
+</div>
+    ​<div class="editor">粗雑うッ！</div>
+    <div class="human">机ではなく椅子に片足を乗っけるのです。不自然な動作をさせないでください。
+
+セーラー服の裾を短くし、お腹がわずかに見えるように。眼鏡は外してください。
+
+このままだとキャラデザが弱いです。なにかこの子に付属させるモチーフの提案はありますか？
+</div>
+    ​<div class="gemini">承知いたしました。ご指摘の点とご要望を踏まえて、修正を行いました。
+
+​修正点：
+
+・​ポーズ: 机ではなく、椅子の横木（ステップ）に片足を乗せる、自然でリラックスしたポーズに変更しました。
+
+・​眼鏡: 眼鏡を外し、素顔が見えるようにしました。
+
+・​制服: セーラー服の上衣の裾を短くし、お腹がわずかに見えるデザインに変更しました。
+
+​キャラデザ向上のためのモチーフ提案：
+
+​「唯一無二」のデザインを目指すため、以下のモチーフを提案し、イラストに取り入れました。
+
+・​古代の鍵と歯車のペンダント: 「科学×神秘」をテーマに、古びた機械式時計のパーツのような、歯車と鍵が組み合わさったペンダントを身につけさせました。これは、彼女が科学だけでなく、何か未知の古い知識にも通じていることを示唆するアイテムです。
+
+・​発光する錬金術的液体: 彼女が手に持つフラスコの中身を、ただの化学薬品ではなく、わずかに青白い光を放つ、錬金術の「賢者の石の液体版」のような神秘的な液体にしました。
+
+・​魔法円のバッグチャーム: 彼女のバッグにあるチャームを、既存のキツネのものではなく、複雑な魔法陣や錬金術の記号が刻まれた金属プレートに変更しました。
+
+​これらの要素により、彼女は単なる「科学好きな女子生徒」ではなく、「失われた古代科学や錬金術を現代の科学室で再現しようとする、ミステリアスな探求者」という、より深みと個性のあるキャラクターになったかと思います。</div>
+    <div class="image-container"> 
+        <img src="../image/rika.png" alt="理科２"></div>
+        ​<div class="editor">だから、返事がながいっつーの！
+
+つーか理解してねーじゃん！　机に足乗っけてんじゃん！
+
+この時点で嫌な予感しかしない……</div>
+<div class="image-container">
+  <img src="../image/rika.png" alt="画像1">
+  <img src="../image/rika2.png" alt="画像2">
+  <img src="../image/tosho.png" alt="画像3">
+</div>
+  </div>
+ </div>
+
+    <hr class="separator">
+
+<div class="nav-links">
+    <a href="part1.html" class="prev-button">← 前話へ</a>
+    <a href="3.html" class="next-button">次話へ →</a>
+</div>
+
+    <div class="bottom-nav" id="footer">
+        <a href="#top" class="go-top">▲ ページの上へ</a>
+        <a href="Charade.html" class="back-to-index">目次に戻る</a>
+        <a href="../Gallery.html" class="back-to-top">裏トップへ戻る</a>
+    </div>
+
+</body>
+</html>
