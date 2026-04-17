@@ -1,3 +1,61 @@
+      body { 
+            font-family: sans-serif; 
+            line-height: 1.8; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 15px; 
+            color: #222; 
+
+        }
+
+        /* 本文タイトル：text-indentで自動的に一マス空ける */
+        .content-title {
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0 30px 0;
+            color: #444;
+            text-indent: 1em; /* これでタイトルの1文字目が自動で空きます */
+        }
+
+        /* 本文エリア */
+        .novel-body {
+            font-family: sans-serif; 
+            font-size: 15px;
+            word-wrap: break-word;
+            color: #333;
+        }
+
+        /* その他ナビゲーション設定（共通） */
+        .jump-link { text-align: right; margin-bottom: 5px; }
+        .jump-link a { font-family: sans-serif; font-size: 13px; color: #777; background: #f0f0f0; text-decoration: none; padding: 5px 12px; border-radius: 4px; }
+        .separator { border: 0; border-top: 1.5px solid #ddd; border-radius: 5px; margin: 20px 0 10px 0; }
+        /* 外枠：とにかく横いっぱいに広がる箱 */
+.nav-links { 
+    display: flex; 
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* 前話へ：常に左にいたい */
+.prev-button { 
+    text-decoration: none; 
+    margin-right: auto; /* 右側をガバーっと空けて、自分は左に残る */
+}
+
+/* 次話へ：常に右にいたい */
+.next-button { 
+    text-decoration: none; 
+    margin-left: auto; /* 左側をガバーっと空けて、自分を右に押し出す */
+}
+        .nav-links a { text-decoration: none; font-size: 16px; color: #0055aa; }
+        .bottom-nav { text-align: center; padding-bottom: 40px; }
+        .bottom-nav a { display: block; text-decoration: none; }
+        .go-top { font-size: 14px; color: #777; margin-bottom: 25px; }
+        .back-to-index { font-weight: bold; font-size: 16px; color: #0055aa; margin-bottom: 15px; }
+        .back-to-top { font-size: 14px; color: #0055aa; }
+
+
 .image-container {
   display: flex; /* 横並びにする */
   gap: 10px;    /* 画像間の隙間 */
