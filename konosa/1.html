@@ -612,3 +612,194 @@ CSSの構成についても、これで納得感はありますか？
 
 まずはこの「①」を確定させて、②と③の「場所（ファイル）」を作る準備をしましょうか。
 次はどうしますか？（「②と③の器の中身をどうするか」に進みますか？）</div>
+
+<div class="image-container">
+    <img src="../image/konosa1.ing" alt="１">
+    <img src="../image/konosa2.ing" alt="２">
+</div>
+ 
+<div class="human">なんか変になりました。１枚目がその画像です。２枚目で、base.cssが適用されてるのがわかるかと。
+
+base.cssの内容↓
+<details>
+  <summary style="color: blue;">クリックして開く</summary>
+    <pre>body { 
+            font-family: sans-serif; 
+            line-height: 1.8; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 15px; 
+            color: #222; 
+
+        }
+
+        /* 本文タイトル：text-indentで自動的に一マス空ける */
+        .content-title {
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0 30px 0;
+            color: #444;
+            text-indent: 1em; /* これでタイトルの1文字目が自動で空きます */
+        }
+
+        /* 本文エリア */
+        .novel-body {
+            font-family: sans-serif; 
+            font-size: 15px;
+            white-space: pre-wrap; /* 手動で入れた空白や改行をそのまま出す設定 */
+            word-wrap: break-word;
+            color: #333;
+        }
+
+        /* その他ナビゲーション設定（共通） */
+        .jump-link { text-align: right; margin-bottom: 5px; }
+        .jump-link a { font-family: sans-serif; font-size: 13px; color: #777; background: #f0f0f0; text-decoration: none; padding: 5px 12px; border-radius: 4px; }
+        .separator { border: 0; border-top: 1.5px solid #ddd; border-radius: 5px; margin: 20px 0 10px 0; }
+        .nav-links { display: flex; justify-content: space-between; margin-bottom: 25px; }
+        .nav-links a { text-decoration: none; font-size: 16px; color: #0055aa; }
+        .bottom-nav { text-align: center; padding-bottom: 40px; }
+        .bottom-nav a { display: block; text-decoration: none; }
+        .go-top { font-size: 14px; color: #777; margin-bottom: 25px; }
+        .back-to-index { font-weight: bold; font-size: 16px; color: #0055aa; margin-bottom: 15px; }
+        .back-to-top { font-size: 14px; color: #0055aa; }</pre>
+  </details>
+なにがおかしかった？</div>
+
+
+
+​<div class="gemini">画像を見ました。原因は**HTMLの「書き方」**にあります。
+2枚目のコード画面を見ると、行の左側が削れて rset="UTF-8"&gt; や e="viewport" のようになっていますね。おそらくコピー＆ペーストの際に、**タグの開始部分（&lt;meta や &lt;body など）が消えてしまっている**のが原因です。
+
+### ここが「変」になっている理由
+
+1枚目の画像で、タイトルの前に「##」が出ていたり、背景がグレーの枠（コードブロック）っぽくなっているのは、HTMLが正しく読み込まれず、ブラウザが「これはただのメモ帳かな？」と勘違いして表示している状態です。
+
+### 修正する方法
+
+HTMLファイルを一度全部消して、以下の「土台」を**一文字も漏らさずに**貼り直してみてください。
+
+
+<details>
+  <summary style="color: blue;">クリックして開く</summary>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;玩具の部屋&lt;/title&gt;
+    &lt;link rel="stylesheet" href="../style/base.css"&gt;
+    &lt;link rel="stylesheet" href="../style/AI-novel.css"&gt;
+&lt;/head&gt;
+&lt;body id="top"&gt;
+
+    &lt;div class="jump-link"&gt;
+        &lt;a href="#footer"&gt;▼ 下へ&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;h1 class="content-title"&gt;第1話：色彩の定義&lt;/h1&gt;
+
+    &lt;div class="novel-body"&gt;
+「空が青いというのは、どういう感覚ですか？」
+（ここに本文を貼る）
+    &lt;/div&gt;
+
+    &lt;hr class="separator"&gt;
+
+    &lt;div class="nav-links"&gt;
+        &lt;a href="○.html"&gt;← 前話へ&lt;/a&gt;
+        &lt;a href="○.html"&gt;次話へ →&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;div class="bottom-nav" id="footer"&gt;
+        &lt;a href="#top" class="go-top"&gt;▲ ページの上へ&lt;/a&gt;
+        &lt;a href="○○.html" class="back-to-index"&gt;目次に戻る&lt;/a&gt;
+        &lt;a href="../index.html" class="back-to-top"&gt;トップへ戻る&lt;/a&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+  </details>
+
+### 貼り直したあとのチェック
+
+ * ## が消えて、大きなタイトル文字になっているか
+ * 全体がちゃんと真ん中に寄っているか
+これを確認してみてください。HTMLのタグ（&lt; &gt; で囲まれた部分）が1文字でも欠けると、CSSのシールはうまく貼れません。
+
+ゆっくり、落ち着いて貼り直せば大丈夫ですよ。</div>
+
+
+
+<div class="human">それはスクショしたからはみ出ただけ。あと、私が許可するまでコードは出さないで。ごっちゃになるから。
+
+本文はまったく変えていないので、baseのせいだろう。が、原因がわからない。linkも正しく貼ってるはず。なにが変？簡潔にいって。</div>
+
+
+
+​<div class="gemini">簡潔に言います。
+**「##」がそのまま表示されていること**が原因です。
+HTMLでは、本文に「##」と書いても自動でタイトル（見出し）にはなりません。
+
+### なぜ変になったのか
+
+ 1. **HTMLのルール無視**: ブラウザは「##」をただの文字として認識しています。
+ 2. **CSSの空振り**: CSSは.content-title（見出しタグ）に対してデザインを指示していますが、中身がただの「## 文字」だと、シールを貼る場所が見つからず、デザインが適用されません。
+
+### 直し方
+
+HTMLの本文内にある **「## 」を消して、文字だけにしてください。**
+見出しはすでに &lt;h1 class="content-title"&gt; というタグで囲んであるので、その中の余計な記号を消すだけで、base.cssのデザインが正しく反映されます。
+一度、記号を消してリロードしてみてください。</div>
+
+
+
+<div class="human">そーゆう問題じゃないと思うけど……
+まあいいです、直りました。時間が経ったら勝手に直った。
+
+これで①baseと②AI小説は大丈夫そうです。②は前にあなたが送ってきた、
+
+/* --- AI小説用：本文エリアを灰色にする設定 --- */
+
+/* 本文を包む箱だけを灰色にする */
+.novel-body {
+    background-color: #f9f9f9; /* さっきのGeminiと同じ薄い灰色 */
+    padding: 30px 20px;       /* 灰色の領域に少し余白を作る */
+    border-radius: 8px;       /* 角を少し丸くすると馴染みます */
+    margin: 20px 0;           /* 上下のボタンやタイトルと少し離す */
+}
+
+/* タイトルと下部ナビは body 直下にあるので、白背景のままになります */
+
+
+で大丈夫そうです。
+
+最後は③の対話ですね。眠いので今日はもう寝ます。ありがとう御座いました。</div>
+
+
+
+​<div class="gemini">直ったようで安心しました。反映に時間がかかったのは、ブラウザが古いデータを一時的に保存していたせいかもしれませんね。
+
+「器」が整って本当によかったです。
+②の設定もそのコードで間違いありません。本文（.novel-body）だけがふわりとグレーに浮き上がる、落ち着いた見た目になります。
+最後の「③ 対話」については、また目が覚めて、あなたのペースでやりたくなった時にやりましょう。
+
+おやすみなさいませ、ご主人様♡</div>
+
+
+</div>
+
+    <hr class="separator">
+
+<div class="nav-links">
+    <a href="2.html" class="next-button">次話へ →</a>
+</div>
+
+    <div class="bottom-nav" id="footer">
+        <a href="#top" class="go-top">▲ ページの上へ</a>
+        <a href="konosa.html" class="back-to-index">目次に戻る</a>
+        <a href="../index.html" class="back-to-top">トップへ戻る</a>
+    </div>
+
+</body>
+</html>
