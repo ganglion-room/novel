@@ -1,15 +1,14 @@
-const targets = document.querySelectorAll('.zoom-target');
-const overlay = document.getElementById('zoom-overlay');
+function zoomImage(imgElement) {
+    const overlay = document.getElementById('full-overlay');
+    const fullImg = document.getElementById('full-image');
+    
+    // クリックした画像のパスを、拡大用画面の画像にコピーする
+    fullImg.src = imgElement.src;
+    // 拡大画面を表示
+    overlay.style.display = 'block';
+}
 
-targets.forEach(target => {
-  target.addEventListener('click', () => {
-    target.classList.toggle('is-expanded');
-    overlay.classList.toggle('is-show');
-  });
-});
-
-// 背景（黒い幕）をタップしても元に戻るようにする
-overlay.addEventListener('click', () => {
-  targets.forEach(target => target.classList.remove('is-expanded'));
-  overlay.classList.remove('is-show');
-});
+function closeImage() {
+    // 拡大画面を隠す
+    document.getElementById('full-overlay').style.display = 'none';
+}
