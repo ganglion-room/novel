@@ -17,7 +17,7 @@ body {
             text-shadow: 
                 -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff,
                 -4px -4px 0 #f8b500, 4px -4px 0 #f8b500, -4px 4px 0 #f8b500, 4px 4px 0 #f8b500;
-        }
+       font-weight: 900; }
         
         .intro { text-align: center; margin: 30px 0; font-size: 16px; }
         .intro span { display: inline-block; }
