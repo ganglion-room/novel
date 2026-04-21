@@ -34,6 +34,8 @@
 私が納得するまで、都度都度口頭で修正していきます。
 </div>
         ​<div class="gemini">クエリが正常に作動しませんでした</div>
+
+<img src="photo1.jpg" class="zoom-target" width="200" style="cursor: pointer;">
         ​<div class="ChatGPT">ここにChatGPT</div>
     </div>
 
@@ -48,6 +50,12 @@
         <a href="Charade.html" class="back-to-index">目次に戻る</a>
         <a href="../Gallery.html" class="back-to-top">裏トップへ戻る</a>
     </div>
+
+<!-- 2. ダイアログは1つだけ用意 -->
+<dialog id="imageDialog" style="padding: 0; border: none; background: transparent;">
+  <div id="backdrop" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: -1;"></div>
+  <img id="largeImage" src="" style="max-width: 90vw; max-height: 90vh; display: block; margin: auto;">
+</dialog>
 
 </body>
 </html>
