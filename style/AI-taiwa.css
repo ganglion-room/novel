@@ -174,3 +174,16 @@
 .zoom-target:hover {
   opacity: 0.8; /* ホバーした時に少し透明にする演出 */
 }
+
+
+
+/* 画面の幅が 600px より小さいとき（スマホなど）の設定 */
+@media (max-width: 600px) {
+    .human {
+        margin-left: 5%;  /* 左の余白を 20% から 5% に減らす */
+    }
+    .gemini, .ChatGPT {
+        margin-right: 5%; /* 右の余白を 20% から 5% に減らす */
+    }
+}
+
