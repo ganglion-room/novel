@@ -94,6 +94,25 @@ summary {
   color: red; 
   font-weight: bold; 
 }
+/* 水平線 */
+.separator {
+    border: 0;
+    border-top: 1.5px solid #ddd;
+    margin: 50px 0 10px 0;
+}
+
+/* フッター戻り */
+.return {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.return a {
+    display: block;
+    text-decoration: none;
+}
+
+.to-home { font-size: 14px; color: #0055aa; }
 
 </style>
 
@@ -155,7 +174,9 @@ summary {
    <hr class="separator">
 
 <!--ホームページへ-->
-   <a href="../index.html" class="to-home">トップへ戻る🏠️</a>
+   <div class="return">
+       <div class="to-home"><a href="../index.html" class="to-home">トップへ戻る🏠️</a></div>
+   </div>
 </footer>
 
 </body>
