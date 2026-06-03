@@ -44,8 +44,10 @@
         <a href="#over" class="to-over">▲ ページの上へ</a>
 
 <!--目次　ホームページ　トップへ-->
+    {% if page.long %}
         <a href="{{ page.snp }}.html" class="to-synopsis">目次に戻る</a>
-
+    {% endif %}
+        
     {% if page.ura %}
         <a href="../../Gallery.html" class="to-home">裏トップへ戻る🔑</a>
     {% else %}
