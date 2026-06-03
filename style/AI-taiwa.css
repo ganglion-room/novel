@@ -86,8 +86,8 @@
     color: #888;
 }
 
-/* 3. AI共通設定（GeminiとGPT両方に効く） */
-.gemini, .ChatGPT {
+/* 3. AI共通設定 */
+.gemini {
     position: relative;
     margin: 25px 20% 50px 0; /* 左側を空けて右に寄せる */
     padding: 15px;
@@ -101,7 +101,7 @@
     border: 1px solid #d1d9e0;
 }
 .gemini::before {
-    content: "Gemini";
+    content: "AI";
     position: absolute;
     top: -22px;
     left: 5px;
