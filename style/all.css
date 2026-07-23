@@ -20,104 +20,12 @@ h1 {
     text-indent: 1em;
 }
 
-/* 基本・AI小説モード */
-.novel, .ai-novel, .E, .H, .G {
+.novel {
     white-space: pre-wrap;
 }
 
-.ai-novel, .E, .H, .G {
-    font-size:15px;
-}
-
-.ai-novel {
-    background-color: #eff3f6;
-    padding: 30px 10px;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-.E {
-    text-align: center;
-    font-size: 1.1em;
-    margin: 30px 0;
-}
-
-/* 会話ボックス共通 */
-.H, .G {
-    position: relative;
-    padding: 15px;
-    border-radius: 12px;
-    margin: 60px 0;
-}
-
-/* 人間 (Human) */
-.H {
-    margin-left: 20%;
-    border: 1px solid #e0e0e0;
-    background-color: #fff;
-}
-
-.H::before {
-    content: "人間";
-    position: absolute;
-    top: -25px; 
-    right: 5px;
-    font-size: 0.8em;
-    color: #888;
-}
-
-/* AI */
-.G {
-    margin-right: 20%;
-    border: 1px solid #d1d9e0;
-    background-color: #eff3f6; 
-}
-
-.G::before {
-    content: "AI";
-    position: absolute;
-    top: -25px; 
-    left: 5px;
-    font-size: 0.8em;
-    color: #888;
-}
-
-/* コード欄 */
-.html, .css, .js {
-    font-family: "Courier New", monospace;
-    border: 1px solid #ddd;
-    padding: 10px 15px;
-    margin: 20px 10px;
-    border-radius: 8px;
-    overflow: auto;
-}
-
-.html { background-color: #fef2ff; }
-.css { background-color: #fffef2; }
-.js { background-color: #d9ffe4; }
-
-/* 表 (Table) - 修正済み */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    overflow-x: auto;/*はみ出たらスクロール*/
-    margin: 20px 0;
-    white-space: nowrap; /* 自動改行を禁止 */
-    table-layout: auto;/*列幅を量に合わせて自動調整*/   
-}
-
-th, td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: center;
-}
-
-th { background-color: #bbd6fa; }
-td { background-color: #fff; }
-
-
 /* ナビゲーション */
-.to-under { /* 名前の修正 */
+.to-under {
     text-align: right;
     margin-bottom: 5px;
 }
@@ -166,26 +74,9 @@ td { background-color: #fff; }
 .to-synopsis { font-weight: bold; font-size: 16px; color: #0055aa; margin-bottom: 15px; }
 .to-home { font-size: 14px; color: #0055aa; }
 
-/* スマホ対応 */
-@media (max-width: 600px) {
-    .H { margin-left: 5%; }
-    .G { margin-right: 5%; }
-}
-
 /*img設定*/
 img {
   display: block;
   margin: 10px auto;
   width: 40%;
-}
-
-/* details設定 */
-details {
-    white-space: pre-wrap;
-    background-color: #fef7ff; /* 元の色 */
-    transition: background-color 0.3s; /* 色の変化を滑らかにする場合 */
-}
-
-details[open] {
-    background-color: #e0f2f1; 
 }
