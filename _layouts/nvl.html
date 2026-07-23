@@ -3,14 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:site_name" content="玩具の部屋">
-    <meta property="og:image" content="https://ganglion-room.github.io/novel/images/og.webp">
-    <meta property="og:type" content="website">
-
-<!--表か裏か-->
-    <title>玩具の部屋{% if page.ura %}（裏）{% endif %}</title>
-
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='sans-serif' fill='%23f8b500' style='paint-order: stroke; stroke: %23fff; stroke-width: 8px;'>玩</text></svg>">
+    <title>玩具の部屋</title>
     <link rel="stylesheet" href="{{ '/style/all.css' | relative_url }}">
     <link href="https://googleapis.com" rel="stylesheet">
 </head>
@@ -23,10 +16,10 @@
 
 <main class="novel">
     <h1>{{ page.ept }}</h1>
-{{ content }}  <!-- ← ここに各話の中身が自動で入る -->
+{{ content }}
 </main>
 
-<footer><!-- ここに既成のフッター -->
+<footer>
    <hr class="separator">
 
 <!--前話　次話-->
@@ -47,12 +40,7 @@
     {% if page.long %}
         <a href="{{ page.snp }}.html" class="to-synopsis">目次に戻る</a>
     {% endif %}
-        
-    {% if page.ura %}
-        <a href="../../Gallery.html" class="to-home">裏トップへ戻る🔑</a>
-    {% else %}
         <a href="{{ '/' | relative_url }}index.html" class="to-home">トップへ戻る🏠️</a>
-    {% endif %}
     </div>
 </footer>
 
