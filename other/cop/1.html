@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>玩具の部屋</title>
-
+<style>
+  video {
+  width: 50%;      /* 親要素の半分の幅にする */
+  height: auto;    /* 縦横比を保つ */
+  display: block;  /* 中央寄せ用 */
+  margin: 0 auto;  /* 中央寄せ用 */
+}
+</style>
 </head>
 <body>
-  <video controls width="500px, initial-scale=1.0">
-  <source src="genjitu2.mp4" type="video/mp4"> 
-</video>  
+  <video controls>
+    <source src="genjitu2.mp4" type="video/mp4"> 
+  </video>  
 </body>
-
 </html>
