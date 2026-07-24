@@ -27,7 +27,6 @@ h1 {
 /* ナビゲーション */
 .to-under {
     text-align: right;
-    margin-bottom: 5px;
 }
 
 .to-under a {
@@ -43,7 +42,7 @@ h1 {
 .separator {
     border: 0;
     border-top: 1.5px solid #ddd;
-    margin: 50px 0 10px 0;
+    margin: 30px 0 10px 0;
 }
 
 /* 前話 次話 */
