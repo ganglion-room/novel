@@ -4,8 +4,8 @@ body {
             max-width: 800px; 
             margin: 0 auto; 
             padding: 20px; 
-            color: #222; 
-            background: #fff; 
+            color: #333; 
+            background: #fcfcfc; 
         }
         
         .site-title { 
@@ -23,19 +23,15 @@ body {
         .intro span { display: inline-block; }
 
         .animal-line { 
-            text-align: left; 
+            text-align: center; 
             margin-bottom: -10px; 
-            padding-left: 25px; 
             font-size: 28px; 
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             white-space: nowrap;
         }
 
-        .border-main { 
-            border: 0; 
-            border-top: 3px solid #666; 
-            border-radius: 2px;
-            margin: 0 0 50px 0; 
+        .border-main {
+            margin-bottom: 50px; 
         }
 
         .category { text-align: left; margin-bottom: 40px; }
